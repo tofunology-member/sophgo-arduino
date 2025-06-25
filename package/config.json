@@ -8,7 +8,7 @@
   },
   "ignoredVersions": [],
   "current": {
-    "name": "soghgo",
+    "name": "sophgo",
     "architecture": "SG200X",
     "version": "0.2.7",
     "category": "SG200X",
@@ -107,7 +107,7 @@
         ]
       },
       {
-        "packager": "soghgo",
+        "packager": "sophgo",
         "name": "scp_upload",
         "version": "0.1",
         "source": "internal",
