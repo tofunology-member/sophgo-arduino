@@ -1,6 +1,4 @@
 menu.duo256_uploadmethod=Duo256 Upload Method
-menu.uploaduser=Upload User
-menu.uploadhost=Upload Host
 menu.uploadpath=Upload Path (Remote)
 ##############################################################
 ###                      Boards Start                      ###
@@ -47,14 +45,6 @@ duo256.pid.0=0x1009
 
 duo256.menu.duo256_uploadmethod.burntool=BurnTool
 duo256.menu.duo256_uploadmethod.scp=SCP
-
-duo256.menu.uploaduser.root=root
-duo256.menu.uploaduser.root.upload.user=root
-duo256.menu.uploaduser.other=other
-duo256.menu.uploaduser.other.upload.user=other
-
-duo256.menu.uploadhost.milkv-duo=milkv-duo.local
-duo256.menu.uploadhost.milkv-duo.upload.host=milkv-duo.local
 
 duo256.menu.uploadpath.path0=/lib/firmware/arduino.elf.incoming
 duo256.menu.uploadpath.path0.upload.remote_path=/lib/firmware/arduino.elf.incoming
