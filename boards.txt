@@ -35,7 +35,28 @@ duo.build.defines=
 duo.build.ldscript=link.ld
 
 ##############################################################
+# --- カスタムメニュー定義 ---
+menu.duo256_uploadmethod=Duo256 Upload Method
+menu.duo256_uploadmethod.burntool=BurnTool
+menu.duo256_uploadmethod.scp=SCP
 
+# 必要ならユーザー/ホスト/パスもカスタムメニューで
+menu.uploaduser=Upload User
+menu.uploadhost=Upload Host
+menu.uploadpath=Upload Path
+
+duo256.menu.uploaduser.pi.upload.user=pi
+duo256.menu.uploaduser.root.upload.user=root
+
+duo256.menu.uploadhost.host1.upload.host=192.168.1.100
+duo256.menu.uploadhost.host2.upload.host=192.168.1.101
+
+duo256.menu.uploadpath.homepi.upload.remote_path=/home/pi/arduino.elf
+duo256.menu.uploadpath.homeroot.upload.remote_path=/home/root/arduino.elf
+
+# duo256用
+duo256.menu.duo256_uploadmethod.burntool.upload.tool=burntool_py
+duo256.menu.duo256_uploadmethod.scp.upload.tool=scp_upload
 duo256.name=Duo256 Dev Module
 duo256.vid.0=0x3346
 duo256.pid.0=0x1009
@@ -43,14 +64,15 @@ duo256.pid.0=0x1009
 duo256.upload.tool=burntool_py
 duo256.upload.tool.default=burntool_py
 
+# --- 既存のburntool_py用設定（BurnTool選択時に有効） ---
 duo256.upload.flags=
 duo256.upload.extra_flags=
 duo256.upload.use_1200bps_touch=false
 duo256.upload.wait_for_upload_port=false
-
 duo256.serial.disableDTR=true
 duo256.serial.disableRTS=true
 
+# --- build系は共通でOK ---
 duo256.build.tarch=riscv64
 duo256.build.target=unknown
 duo256.build.mcu=sg200x
@@ -61,7 +83,6 @@ duo256.build.extra_flags=
 duo256.build.bootloader_addr=0x0
 duo256.build.start_addr=0x8fe00000
 duo256.build.image_size=0x200000
-
 duo256.build.f_cpu=25000000L
 duo256.build.img_freq=48m
 duo256.build.partitions=default

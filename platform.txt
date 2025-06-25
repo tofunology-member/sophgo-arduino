@@ -141,3 +141,11 @@ tools.burntool_py.bootloader.protocol=serial
 tools.burntool_py.bootloader.params.verbose=
 tools.burntool_py.bootloader.params.quiet=
 tools.burntool_py.bootloader.pattern=
+
+# --- scp_upload（新規追加） ---
+tools.scp_upload.path={runtime.tools.scp_upload.path}
+tools.scp_upload.cmd=scp_upload.sh
+tools.scp_upload.cmd.linux=scp_upload.sh
+tools.scp_upload.upload.protocol=scp
+tools.scp_upload.upload.pattern_args="{build.path}/{build.project_name}.elf" "{upload.user}" "{upload.host}" "{upload.remote_path}"
+tools.scp_upload.upload.pattern="{path}/{cmd}" {upload.pattern_args}
