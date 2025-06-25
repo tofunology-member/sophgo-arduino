@@ -1,6 +1,6 @@
 {
   "basicInfo": {
-    "repoOwner": "kubuds",
+    "repoOwner": "tofunology-member",
     "repoName": "sophgo-arduino",
     "downloadUrlFmt": "https://github.com/@REPOOWNER@/@REPONAME@/releases/download/@VERSION@/@ARCHIVENAME@",
     "indexJsonFileName": "package_sg200x_index.json",
