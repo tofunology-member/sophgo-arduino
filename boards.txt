@@ -1,3 +1,7 @@
+menu.duo256_uploadmethod=Duo256 Upload Method
+menu.uploaduser=Upload User
+menu.uploadhost=Upload Host
+menu.uploadpath=Upload Path (Remote)
 ##############################################################
 ###                      Boards Start                      ###
 ##############################################################
@@ -35,34 +39,24 @@ duo.build.defines=
 duo.build.ldscript=link.ld
 
 ##############################################################
-# --- カスタムメニュー定義 ---
-menu.duo256_uploadmethod=Duo256 Upload Method
-menu.duo256_uploadmethod.burntool=BurnTool
-menu.duo256_uploadmethod.scp=SCP
-
-# 必要ならユーザー/ホスト/パスもカスタムメニューで
-menu.uploaduser=Upload User
-menu.uploadhost=Upload Host
-menu.uploadpath=Upload Path
-
-duo256.menu.uploaduser.pi.upload.user=pi
-duo256.menu.uploaduser.root.upload.user=root
-
-duo256.menu.uploadhost.host1.upload.host=192.168.1.100
-duo256.menu.uploadhost.host2.upload.host=192.168.1.101
-
-duo256.menu.uploadpath.homepi.upload.remote_path=/home/pi/arduino.elf
-duo256.menu.uploadpath.homeroot.upload.remote_path=/home/root/arduino.elf
 
 # duo256用
-duo256.menu.duo256_uploadmethod.burntool.upload.tool=burntool_py
-duo256.menu.duo256_uploadmethod.scp.upload.tool=scp_upload
 duo256.name=Duo256 Dev Module
 duo256.vid.0=0x3346
 duo256.pid.0=0x1009
 
-duo256.upload.tool=burntool_py
-duo256.upload.tool.default=burntool_py
+duo256.menu.duo256_uploadmethod.burntool=BurnTool
+duo256.menu.duo256_uploadmethod.scp=SCP
+
+duo256.menu.uploaduser.root=root
+duo256.menu.uploaduser.other=other
+
+duo256.menu.uploadhost.milkv-duo=milkv-duo.local
+
+duo256.menu.uploadpath.path0=/lib/firmware/arduino.elf.incoming
+
+duo256.menu.duo256_uploadmethod.burntool.upload.tool=burntool_py
+duo256.menu.duo256_uploadmethod.scp.upload.tool=scp_upload
 
 # --- 既存のburntool_py用設定（BurnTool選択時に有効） ---
 duo256.upload.flags=
