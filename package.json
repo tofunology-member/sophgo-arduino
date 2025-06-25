@@ -1,7 +1,7 @@
 {
     "name": "framework-arduino-sophgo",
     "description": "Arduino Wiring-based Framework (Sophgo Core)",
-    "version": "0.2.11",
+    "version": "0.2.12",
     "url": "https://github.com/xxx/arduino-sophgo",
     "keywords": [
         "framework",

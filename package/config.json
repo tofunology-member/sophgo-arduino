@@ -8,9 +8,9 @@
   },
   "ignoredVersions": [],
   "current": {
-    "name": "SG200X",
+    "name": "tofunology",
     "architecture": "SG200X",
-    "version": "0.2.8",
+    "version": "0.2.12",
     "category": "SG200X",
     "archiveFileName": "arduino-sophgo.zip",
     "help": {
