@@ -2,8 +2,8 @@
   "packages": [
     {
       "name": "sophgo",
-      "maintainer": "Sophgo",
-      "websiteURL": "https://github.com/kubuds/sophgo-arduino",
+      "maintainer": "sophgo",
+      "websiteURL": "https://github.com/tofunology-member/sophgo-arduino",
       "email": "global.support@sophgo.com",
       "help": {
         "online": "https://community.milkv.io/"

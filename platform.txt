@@ -70,6 +70,7 @@ compiler.elf2hex.hex.flags=-O ihex -R .eeprom
 compiler.elf2hex.cmd={compiler.prefix}objcopy
 compiler.elf2asm.asm.flags=-D
 compiler.elf2asm.cmd={compiler.prefix}objdump
+compiler.readelf.cmd={compiler.prefix}readelf
 
 ## Compile c files
 recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.extra_flags} {compiler.c.flags} -DF_CPU={build.f_cpu} -DSTART_ADDR={build.start_addr} -DIMAGE_SIZE={build.image_size} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" -DARDUINO_PARTITION_{build.partitions} {build.extra_flags} {compiler.cpreprocessor.flags} {includes}  "{source_file}" -o "{object_file}"
@@ -141,3 +142,12 @@ tools.burntool_py.bootloader.protocol=serial
 tools.burntool_py.bootloader.params.verbose=
 tools.burntool_py.bootloader.params.quiet=
 tools.burntool_py.bootloader.pattern=
+
+# --- scp_upload（新規追加） ---
+tools.scp_upload.path={runtime.tools.scp_upload.path}
+tools.scp_upload.cmd=scp_upload.sh
+tools.scp_upload.cmd.windows=powershell
+tools.scp_upload.upload.protocol=scp
+tools.scp_upload.upload.pattern_args="{build.path}/{build.project_name}.elf" "{compiler.path}{compiler.readelf.cmd}" "{upload.remote_path}"
+tools.scp_upload.upload.pattern.linux="{path}/{cmd}" {upload.pattern_args}
+tools.scp_upload.upload.pattern.windows={cmd} -Command "wsl  $(wsl wslpath "'{runtime.tools.scp_upload.path}\scp_upload_win.sh'") $(wsl wslpath "'{build.path}/{build.project_name}.elf'") $(wsl wslpath "'{compiler.path}{compiler.readelf.cmd}.exe'") {upload.remote_path} $(wsl wslpath "'{path}/sshpass.exe'") "
