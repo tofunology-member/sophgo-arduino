@@ -146,8 +146,10 @@ tools.burntool_py.bootloader.pattern=
 # --- scp_upload（新規追加） ---
 tools.scp_upload.path={runtime.tools.scp_upload.path}
 tools.scp_upload.cmd=scp_upload.sh
+tools.scp_upload.cmd.macosx=scp_upload_macosx.sh
 tools.scp_upload.cmd.windows=powershell
 tools.scp_upload.upload.protocol=scp
 tools.scp_upload.upload.pattern_args="{build.path}/{build.project_name}.elf" "{compiler.path}{compiler.readelf.cmd}" "{upload.remote_path}"
 tools.scp_upload.upload.pattern.linux="{path}/{cmd}" {upload.pattern_args}
+tools.scp_upload.upload.pattern.macosx="{path}/{cmd}" {upload.pattern_args}
 tools.scp_upload.upload.pattern.windows={cmd} -Command "wsl  $(wsl wslpath "'{runtime.tools.scp_upload.path}\scp_upload_win.sh'") $(wsl wslpath "'{build.path}/{build.project_name}.elf'") $(wsl wslpath "'{compiler.path}{compiler.readelf.cmd}.exe'") {upload.remote_path} $(wsl wslpath "'{path}/sshpass.exe'") "
